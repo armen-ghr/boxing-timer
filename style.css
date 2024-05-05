@@ -1,0 +1,131 @@
+/* style.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="number"], input[type="text"] {
+    width: 35%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.display, .clock {
+    height: 100%;
+    width: 100%;
+   
+    background-color: #f8f8f8;
+    text-align: center;
+    font-size: 9em;
+    
+}
+
+#left-display {
+    background-color: #db251e;
+
+    font-size: 18em;
+}
+
+#right-display {
+    background-color: #002bff;
+    
+    font-size: 18em;
+}
+
+#left-input {
+    display: none;
+}
+
+#right-input {
+    display: none;
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+.button-group button {
+    margin-right: 5px;
+    padding: 5px 10px;
+}
+
+#left-column {
+    background-color: #db251e;
+}
+
+#left-column .button-group button{
+    background-color: #db251e;
+}
+
+
+#right-column {
+    background-color: #002bff;
+}
+
+#right-column .button-group button{
+    background-color: #002bff;
+}
+
+#left-notice-display {
+    color: yellow;
+    font-size: 7em;
+    margin-bottom: 50px;
+}
+
+#right-notice-display {
+    color: yellow;
+    font-size: 7em;
+    margin-bottom: 50px;
+}
+
+#left-first-name-display {
+    font-size: 5em;
+    height: 180px;
+}
+
+#right-first-name-display {
+    font-size: 5em;
+    height: 180px;
+}
+
+#center-column {
+    background-color: black;
+    color: white;
+}
+
+#weight-display {
+    background-color: black;
+    color: white;
+}
+
+#clock-display {
+    background-color: black;
+    color: white;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between; /* Distribute items equally */
+}
+
+.button-group button {
+    flex: 1; /* Each button takes equal space */
+    margin: 5px; /* Add spacing between buttons */
+}

@@ -1,0 +1,78 @@
+<!-- All rights reserved by developer Armen Ghahramanyan -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="column" id="left-column">
+            <div  id="left-first-name-display"></div>
+            <div class="display" id="left-display"></div>
+            <div  id="left-notice-display"></div>
+            <div class="button-group">
+                <!-- Addition Buttons -->
+                <button onclick="modifyValue(1, 'left')">+1</button>
+                <button onclick="modifyValue(2, 'left')">+2</button>
+                <button onclick="modifyValue(3, 'left')">+3</button>
+                <button onclick="modifyValue(4, 'left')">+4</button>
+                <button onclick="addNotice('left')">+&#9872;</button>
+            </div>
+            <div class="button-group">
+                <!-- Subtraction Buttons -->
+                <button onclick="modifyValue(-1, 'left')">-1</button>
+                <button onclick="modifyValue(-2, 'left')">-2</button>
+                <button onclick="modifyValue(-3, 'left')">-3</button>
+                <button onclick="modifyValue(-4, 'left')">-4</button>
+                <button onclick="removeNotice('left')">-&#9872;</button>
+            </div>
+            <input type="number" id="left-input" oninput="updateDisplay('left')" value="0">
+        </div>
+        <div class="column" id="center-column">
+            <div class="button-group">
+               
+            </div>
+            <input type="text" id="left-first-name-input" placeholder="RED NAME" style="display: none;" oninput="updateDisplay('left-first-name')">
+            <input type="text" id="right-first-name-input" placeholder="BLUE NAME" style="display: none;" oninput="updateDisplay('right-first-name')">
+            <input type="text" id="clock-input" placeholder="MM:SS ROUND" style="display: none;" oninput="addColon('clock-input')" >
+            <input type="text" id="break-clock-input" placeholder="MM:SS TIME OUT" style="display: none;" oninput="addColon('break-clock-input')" >
+            <input type="text" id="weight-input" placeholder="KG" style="display: none;" oninput="updateDisplay('weight')">
+            <div class="clock" id="clock-display"></div>
+            <div class="clock" id="weight-display"></div>
+            <div class="button-group">
+                <button id="Start Round" onclick="startTimer()">START ROUND</button>
+                <button id="Start Break" onclick="startBreakTimer()">START TIME OUT</button>
+                <button id="reset" onclick="reset()">RESET</button>
+                <button id="pause-resume" onclick="toggleTimer()" disabled>PAUSE</button>
+                <button id="toggle-input" onclick="toggleInput()">Settings</button>
+             </div>
+        </div>
+        <div class="column" id="right-column">
+            <div id="right-first-name-display"></div>
+            <div class="display" id="right-display"></div>
+            <div  id="right-notice-display"></div>
+            <div class="button-group">
+                <!-- Addition Buttons -->
+                <button onclick="modifyValue(1, 'right')">+1</button>
+                <button onclick="modifyValue(2, 'right')">+2</button>
+                <button onclick="modifyValue(3, 'right')">+3</button>
+                <button onclick="modifyValue(4, 'right')">+4</button>
+                <button onclick="addNotice('right')">+&#9872;</button>
+            </div>
+            <div class="button-group">
+                <!-- Subtraction Buttons -->
+                <button onclick="modifyValue(-1, 'right')">-1</button>
+                <button onclick="modifyValue(-2, 'right')">-2</button>
+                <button onclick="modifyValue(-3, 'right')">-3</button>
+                <button onclick="modifyValue(-4, 'right')">-4</button>
+                <button onclick="removeNotice('right')">-&#9872;</button>
+            </div>
+            <input type="number" id="right-input" oninput="updateDisplay('right')" value="0">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
